@@ -37,7 +37,7 @@
                 
                     <div class="mb-6 p-3">
                     <label for="exampleInputEmail1" class="form-label">Name of the animal you want  to adopt</label>
-                    <input type="text" name="name" class="form-control" placeholder="name of the animal" id="name" >
+                    <input type="text" name="name" class="form-control" placeholder="name of the animal" id="name" value="{{ old('name') }}">
                     <span class="text-red-500">
                       @error('name')
                         {{ $message }}
@@ -47,7 +47,7 @@
                   </div>
                   <div class="mb-6 p-3">
                     <label for="exampleInputEmail1" class="form-label">Adopter`s Name</label>
-                    <input type="text" name="aname" class="form-control" placeholder="adoter's name" id="aname" >
+                    <input type="text" name="aname" class="form-control" placeholder="adoter's name" id="aname" value="{{ old('aname') }}" >
                     <span class="text-red-500">
                       @error('aname')
                         {{ $message }}
@@ -57,7 +57,7 @@
                   </div>
                   <div class="mb-6 p-3">
                     <label for="exampleInputEmail1" class="form-label">Address</label>
-                    <input type="text" name="address" class="form-control" placeholder="street address" id="address" >
+                    <input type="text" name="address" class="form-control" placeholder="street address" id="address" value="{{ old('address') }}" >
                     <span class="text-red-500">
                       @error('address')
                         {{ $message }}
@@ -67,7 +67,7 @@
                   </div>
                   <div class="mb-6 p-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input  name="email" type="email" placeholder="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input  name="email" type="email" placeholder="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ old('email') }}">
                     <span class="text-red-500">
                       @error('email')
                         {{ $message }}
@@ -77,7 +77,7 @@
                   </div>
                   <div class="mb-6 p-3">
                     <label for="exampleInputEmail1" class="form-label">Phone Number</label>
-                    <input type="text" name="pno" class="form-control" placeholder="phone number" id="pno" >
+                    <input type="text" name="pno" class="form-control" placeholder="phone number" id="pno"  value="{{ old('pno') }}">
                     <span class="text-red-500">
                       @error('pno')
                         {{ $message }}
@@ -110,7 +110,7 @@
                   <div class="mb-3 p-3">
                     <label for="textarea" class="form-label">If you have pets, please list them below</label>
                     <label for="exampleFormControlTextarea1" class="form-label"></label>
-                    <textarea class="form-control" name="textarea" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" name="textarea" id="exampleFormControlTextarea1" rows="3" >{{ old('textarea') }}</textarea>
                     <span class="text-red-500">
                       @error('textarea')
                         {{ $message }}

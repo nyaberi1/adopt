@@ -26,20 +26,20 @@
               <a class="navbar-brand  hover:bg-blue-200 p-2" href="/"><button class="btn btn-primary">Home</button></a></div>
              
                 <a class="navbar-brand  hover:bg-blue-s200" href="/login">Login</a>
-                <a class="navbar-brand  hover:bg-blue-s200" href="/login">Register</a>
+                <a class="navbar-brand  hover:bg-blue-s200" href="/register">Register</a>
                 <a class="navbar-brand  hover:bg-blue-s200" href="/admin">Admin</a>
            
              
           </nav>
           
           <div class="container bg-gray-600 p">
-            <form action="{{ route('update',  $page->id) }}" method="POST">
+            <form action="{{ route('update', $page->id) }}" method="POST">
                @csrf
                @method('PUT')
                 
                     <div class="mb-6 p-3">
                     <label for="exampleInputEmail1" class="form-label">Name of the animal you want  to adopt</label>
-                    <input type="text" name="name" class="form-control" placeholder="name of the animal" id="name"value="{{ $page->name }}"> >
+                    <input type="text" name="name" class="form-control" placeholder="name of the animal" id="name"value="{{ $page->name }}" >
                     <span class="text-red-500">
                       @error('name')
                         {{ $message }}

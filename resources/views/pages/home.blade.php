@@ -19,6 +19,12 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
+        @if (session()->has('message'))
+              <div class="alert alert-success">
+                {{ session()->get('message') }}
+              </div>
+              <meta http-equiv="refresh" content="2">
+            @endif
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
@@ -30,6 +36,7 @@
                         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="/create">Adopt</a></li> <li class="nav-item"><a class="nav-link" href="/admin">Admin</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/login">Login</a></li><li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
                     </ul>
                 </div>
             </div>

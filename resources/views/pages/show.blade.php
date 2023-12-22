@@ -81,11 +81,6 @@
                 @endforeach
               </tbody>        
             </table>
-            <div class="p-2  text-black hover:text-blue-600">
-        
-              {{ $pages->links() }}
-            </div>    
-          </div>
          
     </body>
 </html>

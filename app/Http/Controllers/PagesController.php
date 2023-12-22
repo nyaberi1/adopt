@@ -52,7 +52,7 @@ class PagesController extends Controller
 
        
 
-        return redirect('/')->with('message', 'You have been enrolled successfully!');
+        return redirect('/')->with('message', 'Post created successfully!');
     }
 
     /**
@@ -71,6 +71,7 @@ class PagesController extends Controller
      */
     public function edit(Page $page)
     {
+        
         return view('pages.edit', ['page' => $page]);
     }
 
@@ -93,7 +94,7 @@ class PagesController extends Controller
         
         $page->update($incomingFields);
         $page->save();
-        return redirect()->route('update', ['page' => $page])->with('message', 'Enrollment delete');
+        return redirect()->route('update', ['page' => $page])->with('message', 'Post update');
     }
 
     /**
@@ -103,6 +104,6 @@ class PagesController extends Controller
     {
          $page->delete();
 
-        return redirect()->route('show', ['page' => $page])->with('message', 'Enrollment delete');
+        return redirect()->route('show')->with('message', 'Post delete');
     }
 }
