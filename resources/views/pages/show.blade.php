@@ -66,14 +66,14 @@
                     <td class="border border-slate-700 ">{{ $page->choice }}</td>
                     <td class="border border-slate-700 ">{{ $page->textarea }}</td>
                     
-                    <td class=""><a
-                        href="{{ route('edit', $page->id) }}">Edit</a></td>
+                    <td class="border border-slate-700"><a
+                        href="{{ route('edit', $page->id) }}"><button>Edit</button></a></td>
         
-                    <td class="">
+                    <td class="border border-slate-700">
                       <form action="{{ route('delete', $page->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button>Delete</button>
+                        <button class="">Delete</button>
                       </form>
                     </td>
         

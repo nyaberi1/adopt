@@ -71,8 +71,7 @@ class PagesController extends Controller
      */
     public function edit(Page $page)
     {
-        
-        return view('pages.edit', ['page' => $page]);
+        return view('pages.edit', ['enroll' => $page]);
     }
 
     /**
